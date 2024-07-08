@@ -1,0 +1,25 @@
+nav {
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 5%;
+  transform: skewX(-10deg);
+  transition: transform 0.2s;
+  background-color: rebeccapurple;
+}
+
+/*nav a:link, nav a:visited {*/
+/*  transform: rotate(-5deg);*/
+/*}*/
+nav a.active,
+nav a:hover {
+  background-color: #9650dc;
+  transform: skewX(-10deg) scale(1.3);
+}

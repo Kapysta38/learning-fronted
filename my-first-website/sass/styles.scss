@@ -1,0 +1,9 @@
+.warning {
+  border: 1px solid;
+  background-color: #ffd900;
+}
+
+.personalWarning {
+  @extend .warning;
+  border-width: 3px;
+}

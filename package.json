@@ -1,0 +1,9 @@
+{
+  "name": "my-first-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build:less": "lessc 'Project первая верстка/less/styles.less' 'Project первая верстка/css/styles.css'",
+    "build:sass": "sass 'Project первая верстка/sass/styles.scss' 'Project первая верстка/css/styles.css'"
+  },
+  "dependencies": {}
+}
