@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,102 +13,112 @@ body {
   font-family: "DM Sans", sans-serif;
   background-color: #19191a;
   color: #fff;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
 
-header {
-  height: 11.0185185185vh;
+div.header-wrapper {
+  display: flex;
+  justify-content: center;
+}
+div.header-wrapper header {
+  width: 1200px;
+  gap: 30px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #19191a;
 }
-header h1 {
-  justify-self: left;
-  margin-left: 50px;
-  margin-top: 26px;
-}
-header h1 a {
-  color: #fff;
-  text-decoration: none;
-}
-header nav {
+div.header-wrapper header .logo {
   display: flex;
-  margin-right: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 20%;
 }
-header nav a {
-  box-sizing: border-box;
-  padding: 20px;
+div.header-wrapper header .logo a {
   color: #fff;
-  text-decoration: none;
-  line-height: 27px;
-  text-align: left;
-  font-weight: 400;
 }
-header nav a:hover, header nav a.active {
+div.header-wrapper header nav {
+  display: flex;
+  margin-right: 5%;
+  gap: 40px;
+}
+div.header-wrapper header nav a {
+  color: #fff;
+}
+div.header-wrapper header nav a:hover, div.header-wrapper header nav a.active, div.header-wrapper header nav a:focus {
   color: #127e96;
 }
 
-main section {
+main div.body-wrapper {
   display: flex;
-  width: 90vw;
+  justify-content: center;
+}
+main div.body-wrapper section {
+  width: 1200px;
+  display: flex;
   height: 80.8333333333vh;
   flex-direction: row;
   align-items: center;
-  margin: 40px 5% 4.4444444444vh;
+  gap: 50px;
 }
-main section .text-container {
-  flex-basis: 50%;
-  font-size: 4.1176470588rem;
-  margin-left: 4.1666666667vw;
-}
-main section .text-container div.icons-container {
-  margin-top: 94px;
-  margin-left: 1.5277777778vw;
-}
-main section .text-container div.icons-container p {
-  line-height: 24px;
-  font-size: 0.8823529412rem;
-  font-weight: 400;
-}
-main section .text-container div.icons-container div.icons {
-  margin-top: 0.9259259259vh;
-  display: flex;
-  flex-direction: row;
-}
-main section .text-container div.icons-container div.icons img {
-  margin-right: 1.3888888889vw;
-}
-main section .text-container p {
-  line-height: 88px;
-  font-weight: 400;
-  letter-spacing: 3.2000000477px;
-}
-main section .text-container p img {
-  position: absolute;
-  margin-top: 0.6em;
-  height: 88px;
-  width: 160px;
-}
-main section .text-container p span {
-  font-size: 4.4117647059rem;
-}
-main section .text-container p span.bold {
-  font-weight: 700;
-  font-size: 4.7058823529rem;
-}
-main section .image-container {
+main div.body-wrapper section div.left-flex-container {
   display: flex;
   flex-basis: 50%;
   justify-content: center;
+  width: 100%;
 }
-main section .image-container img#man {
-  max-width: 45vw;
-  max-height: 80.8333333333vh;
+main div.body-wrapper section div.left-flex-container div.sky_lines {
+  position: relative;
 }
-main section .image-container img#lines {
+main div.body-wrapper section div.left-flex-container div.sky_lines::before {
+  content: url("../img/lines.svg");
   position: absolute;
-  margin-top: -26px;
-  margin-left: -26px;
+  top: -26px;
+  left: -26px;
+}
+main div.body-wrapper section div.left-flex-container div img#man {
+  width: 100%;
+}
+main div.body-wrapper section .right-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  flex-basis: 50%;
+  font-size: 15px;
+}
+main div.body-wrapper section .right-flex-container .text-container {
+  font-size: 70px;
+}
+main div.body-wrapper section .right-flex-container .text-container p {
+  letter-spacing: 3px;
+}
+main div.body-wrapper section .right-flex-container .text-container p .sky_line {
+  position: relative;
+}
+main div.body-wrapper section .right-flex-container .text-container p .sky_line::after {
+  content: url("../img/line.svg");
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+main div.body-wrapper section .right-flex-container .text-container p .sky_line b {
+  font-weight: bold;
+}
+main div.body-wrapper section .right-flex-container div.icons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main div.body-wrapper section .right-flex-container div.icons-container ul.icons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

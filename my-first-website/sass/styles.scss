@@ -1,10 +1,15 @@
 $mainColor: #19191a;
 $textColor: #fff;
 $fontSize: 17px;
+$h1fontSize: 70px;
+$pfontSize: 17px;
+$smallpfontSize: 15px;
 $sectionHeight: 873/1080 * 100vh;
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 @mixin bold {
@@ -20,136 +25,145 @@ body {
   font-family: 'DM Sans', sans-serif;
   background-color: $mainColor;
   color: $textColor;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
 
-header {
-  height: 119/1080 * 100vh;
+@mixin wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $mainColor;
+  justify-content: center;
+}
 
-  h1 {
-    justify-self: left;
-    margin-left: 50px;
-    margin-top: 26px;
+div.header-wrapper {
+  @include wrapper;
 
-    a {
-      color: $textColor;
-      text-decoration: none;
+  header {
+    width: 1200px;
+    //min-width: 500px;
+    //max-width: 1400px;
+    gap: 30px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $mainColor;
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      width: 20%;
+
+      a {
+        color: $textColor;
+      }
+
     }
 
-  }
+    nav {
+      display: flex;
+      margin-right: 5%;
+      gap: 40px;
 
-  nav {
-    //margin-top: 17px;
-    display: flex;
-    margin-right: 1440px - 987px - 403px;
+      a {
+        color: $textColor;
 
-    a {
-      box-sizing: border-box;
-      padding: 20px;
-      color: $textColor;
-      text-decoration: none;
-      line-height: 27px;
-      text-align: left;
-      font-weight: 400;
-
-      &:hover, &.active {
-        color: #127e96;
+        &:hover, &.active, &:focus {
+          color: #127e96;
+        }
       }
     }
   }
 }
 
+
 main {
-  section {
-    display: flex;
-    width: 90vw;
-    height: $sectionHeight;
-    flex-direction: row;
-    //border: 1px solid white;
-    align-items: center;
-    margin: 40px 5% (48px / 1080px) * 100vh;
+  div.body-wrapper {
+    @include wrapper;
 
+    section {
+      width: 1200px;
+      display: flex;
+      height: $sectionHeight;
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+      //margin: auto 5%;
 
-    .text-container {
-      flex-basis: 50%;
-      //border: 1px solid white;
-      font-size: (70px /$fontSize)  * 1rem;
-      margin-left: 60/1440 * 100vw;
+      div.left-flex-container {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: center;
+        width: 100%;
 
-      div {
-        &.icons-container {
-          margin-top: 610.58px - 516.58px;
-          margin-left: 22/1440 * 100vw;
+        div {
+          &.sky_lines {
+            position: relative;
 
-          p {
-            line-height: 24px;
-            font-size: (15px /$fontSize)  * 1rem;
-            font-weight: 400
-
+            &::before {
+              content: url("../img/lines.svg");
+              position: absolute;
+              top: -26px;
+              left: -26px;
+            }
           }
 
-          div.icons {
-            margin-top: 10/1080 * 100vh;
-            display: flex;
-            flex-direction: row;
-            //margin-top: 50px;
-            img {
-              margin-right: 20/1440 * 100vw;
+          img#man {
+            width: 100%;
+
+            //max-width: 50vw;
+            //max-height: $sectionHeight;
+          }
+
+        }
+      }
+
+      .right-flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 50px;
+        flex-basis: 50%;
+        font-size: $smallpfontSize;
+
+        .text-container {
+          font-size: $h1fontSize;
+
+          p {
+            letter-spacing: 3px;
+
+            .sky_line {
+              position: relative;
+
+              &::after {
+                content: url("../img/line.svg");
+                position: absolute;
+                top: 30%;
+                left: 0;
+              }
+
+              b {
+                @include bold;
+              }
             }
           }
         }
-      }
 
+        div.icons-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
 
-      p {
-        line-height: 88px;
-        font-weight: 400;
-        letter-spacing: 3.200000047683716px;
-
-        img {
-          position: absolute;
-          margin-top: 0.6em;
-          height: 88px;
-          width: 160px;
-        }
-
-        span {
-          font-size: (75px /$fontSize)  * 1rem;
-
-          &.bold {
-            font-weight: 700;
-            font-size: (80px /$fontSize)  * 1rem;
+          ul.icons {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
           }
         }
-
       }
     }
-
-    .image-container {
-      display: flex;
-      flex-basis: 50%;
-      justify-content: center;
-
-      img {
-        &#man {
-          max-width: 45vw;
-          max-height: $sectionHeight;
-        }
-
-        &#lines {
-          position: absolute;
-          margin-top: -26px;
-          margin-left: -26px;
-        }
-
-      }
-
-
-    }
-
-
   }
 }

@@ -17,45 +17,48 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>
-        <a href="#Home"><img src="img/castaway.svg" alt="" /></a>
-      </h1>
-      <nav>
-        <a class="active" href="#Home">Home</a>
-        <a href="#Episodes">Episodes</a>
-        <a href="#About">About</a>
-        <a href="#Contact">Contact</a>
-      </nav>
-    </header>
-    <main>
-      <section id="Home">
-        <div class="image-container">
-          <div><img id="lines" src="img/lines.svg" alt="" /></div>
-          <img id="man" src="img/man.svg" alt="" />
+    <div class="header-wrapper">
+      <header>
+        <div class="logo">
+          <a href="#Home"><img src="img/castaway.svg" alt="" /></a>
         </div>
-        <div class="text-container">
-          <div>
-            <p>
-              Take your<br />
-              podcast to the<br /><img src="img/line.svg" alt="" /><span
-                >next</span
-              >
-              <span class="bold">level</span>
-            </p>
-          </div>
-          <div class="icons-container">
-            <p>Listen on</p>
-            <div class="icons">
-              <img src="img/spotyfy.svg" alt="" />
-              <img src="img/more.svg" alt="" />
-              <img src="img/more2.svg" alt="" />
-              <img src="img/more3.svg" alt="" />
-              <img src="img/more5.svg" alt="" />
+        <nav>
+          <a class="active" href="#home">Home</a>
+          <a href="#episodes">Episodes</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <div class="body-wrapper">
+        <section id="Home">
+          <div class="left-flex-container">
+            <!--            <div><img id="lines" src="img/lines.svg" alt="" /></div>-->
+            <div class="sky_lines">
+              <img id="man" src="img/man.svg" alt="" />
             </div>
           </div>
-        </div>
-      </section>
+          <div class="right-flex-container">
+            <div class="text-container">
+              <p>
+                Take your podcast to the <span class="sky_line">next</span>
+                <b>level</b>
+              </p>
+            </div>
+            <div class="icons-container">
+              <p>Listen on</p>
+              <ul class="icons">
+                <li><img src="img/spotyfy.svg" alt="" /></li>
+                <li><img src="img/more.svg" alt="" /></li>
+                <li><img src="img/more2.svg" alt="" /></li>
+                <li><img src="img/more3.svg" alt="" /></li>
+                <li><img src="img/more5.svg" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>
